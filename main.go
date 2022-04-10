@@ -83,6 +83,7 @@ func (x *Rooms) AddMemberWrapper(w http.ResponseWriter, r *http.Request) {
 	x.Rooms[roomCode].AddMember(member)
 	x.Rooms[roomCode].BroadcastMembers()
 	x.Rooms[roomCode].BroadcastStatus()
+	x.Rooms[roomCode].BroadcastGameReady()
 }
 
 func checkAllRequiredVariables(w http.ResponseWriter, r *http.Request) bool {
@@ -194,8 +195,14 @@ func (xr *Room) GetStatus() string {
 		return ss[i].Value.Before(ss[j].Value)
 	})
 
+	var ssret []kv
+	for i, v := range ss {
+		v.Position = i + 1
+		ssret = append(ssret, v)
+	}
+
 	ret := map[string]interface{}{
-		"status": ss,
+		"status": ssret,
 		"type":   "status",
 	}
 	b, e := json.Marshal(ret)
