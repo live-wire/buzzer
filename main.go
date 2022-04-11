@@ -19,7 +19,7 @@ import (
 var upgrader = websocket.Upgrader{} // use default options
 
 var (
-	portOutgoing = "localhost:8080"
+	portOutgoing = ":8080"
 )
 
 type Rooms struct {
