@@ -1,0 +1,13 @@
+.inp {
+    padding: 10px;
+    line-height: inherit;
+    color: inherit;
+    border-radius: 5px;
+    margin-right: 1%;
+    margin-bottom: 5%;
+    border: 1px solid #ccc;
+}
+
+.topc {
+    margin-top: 20%;
+}

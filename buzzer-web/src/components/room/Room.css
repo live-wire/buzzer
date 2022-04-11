@@ -1,0 +1,107 @@
+.Room {
+    text-align: center;
+}
+
+.btn-buzz {
+    margin: 0 auto;
+    width: 200px;
+    height: 180px;
+    line-height: 200px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #f74d4d;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f74d4d), color-stop(100%, #f86569));
+    background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #f74d4d), color-stop(100%, #f86569));
+    box-shadow: 0 15px #e24f4f;
+}
+
+.btn-buzz:active {
+    box-shadow: 0 0 #e24f4f;
+    -webkit-transform: translate(0px, 15px);
+    -moz-transform: translate(0px, 15px);
+    -ms-transform: translate(0px, 15px);
+    -o-transform: translate(0px, 15px);
+    transform: translate(0px, 15px);
+    -webkit-transition: 0.1s all ease-out;
+    -moz-transition: 0.1s all ease-out;
+    -ms-transition: 0.1s all ease-out;
+    -o-transition: 0.1s all ease-out;
+    transition: 0.1s all ease-out;
+}
+
+.btn-buzz-disabled {
+    margin: 0 auto;
+    width: 200px;
+    height: 180px;
+    line-height: 200px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #c3a9a9;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c8abab), color-stop(100%, #706262));
+    background-image: -moz-gradient(linear, left top, left bottom, color-stop(0, #665454), color-stop(100%, #3a3434));
+    box-shadow: 0 15px #594c4c;
+}
+
+.btn-buzz-disabled:active {
+    box-shadow: 0 0 #3a3434;
+    -webkit-transform: translate(0px, 15px);
+    -moz-transform: translate(0px, 15px);
+    -ms-transform: translate(0px, 15px);
+    -o-transform: translate(0px, 15px);
+    transform: translate(0px, 15px);
+    -webkit-transition: 0.1s all ease-out;
+    -moz-transition: 0.1s all ease-out;
+    -ms-transition: 0.1s all ease-out;
+    -o-transition: 0.1s all ease-out;
+    transition: 0.1s all ease-out;
+}
+
+.btn-buzz-green {
+    margin: 0 auto;
+    width: 200px;
+    height: 180px;
+    line-height: 200px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #72f74d;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #72f74d), color-stop(100%, #65f865));
+    background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #72f74d), color-stop(100%, #65f865));
+    box-shadow: 0 15px #40b14f;
+}
+
+.btn-buzz-green:active {
+    box-shadow: 0 0 #40b14f;
+    -webkit-transform: translate(0px, 15px);
+    -moz-transform: translate(0px, 15px);
+    -ms-transform: translate(0px, 15px);
+    -o-transform: translate(0px, 15px);
+    transform: translate(0px, 15px);
+    -webkit-transition: 0.1s all ease-out;
+    -moz-transition: 0.1s all ease-out;
+    -ms-transition: 0.1s all ease-out;
+    -o-transition: 0.1s all ease-out;
+    transition: 0.1s all ease-out;
+}
+
+.btnroom {
+    margin: 20px;
+}
+
+.divider {
+    margin: 2%;
+}
+
+.members {
+    text-align: left;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.cntr {
+    text-align: center;
+}
