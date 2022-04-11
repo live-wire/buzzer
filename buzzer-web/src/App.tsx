@@ -150,7 +150,7 @@ class App extends React.Component<IAppProps, IAppState> {
       return this.state.ws;
     }
     // + "/" + localStorage.getItem("room") + "?" + "name=" + localStorage.getItem("name") + "&uid=blah"
-    var ws = new WebSocket("ws://" + window.location.host + "/join" + "?" + "name=" + localStorage.getItem("name") + "&uid=" + localStorage.getItem("uid") + "&room=" + localStorage.getItem("room"));
+    var ws = new WebSocket("wss://" + window.location.host + "/join" + "?" + "name=" + localStorage.getItem("name") + "&uid=" + localStorage.getItem("uid") + "&room=" + localStorage.getItem("room"));
     var t = this;
     ws.onopen = function (evt) {
       console.log("WS open");
