@@ -1,9 +1,9 @@
-# Buzzer
+# Buzzer 🔴
 ---
 `go - websockets - react`
 
+
 #### Dev
----
 - Server: `go run main.go`
 - Webapp: `cd buzzer-web && npm run build`
 
