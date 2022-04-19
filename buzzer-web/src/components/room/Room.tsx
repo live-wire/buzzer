@@ -1,5 +1,7 @@
 import React from 'react';
 import './Room.css';
+import buzz from './buzz.mp3';
+import fail from './fail.mp3';
 import {
     List,
     ListItem,
@@ -86,22 +88,44 @@ interface IBuzzerProps {
     ready: boolean;
 }
 
-function Buzzer(props: IBuzzerProps) {
-    if (props.ready) {
-        return (
-            <div className='center'>
-                <div onClick={props.buzzer} className="btn btn-buzz"></div>
-                <br></br>
-                <Text fontSize='medium'>GO!</Text>
-            </div>
-        );
+interface IBuzzerState {
+
+}
+
+
+class Buzzer extends React.Component<IBuzzerProps, IBuzzerState> {
+    constructor(props: IBuzzerProps) {
+        super(props);
+        this.playBuzzerSound = this.playBuzzerSound.bind(this);
     }
-    return (
-        <div className='center'>
-            <div className="btn btn-buzz-disabled"></div>
-            <br></br>
-            <Spinner /> <Text fontSize='medium'>Hold up!</Text>
-        </div>);
+    playBuzzerSound() {
+        if (this.props.ready) {
+            var audio = new Audio(buzz);
+            audio.play();
+            this.props.buzzer();
+        } else {
+            var audio = new Audio(fail);
+            audio.play();
+        }
+    }
+    render() {
+        if (this.props.ready) {
+            return (
+                <div className='center'>
+                    <div onClick={this.playBuzzerSound} className="btn btn-buzz"></div>
+                    <br></br>
+                    <Text fontSize='medium'>GO!</Text>
+                </div>
+            );
+        }
+        return (
+            <div className='center' >
+                <div onClick={this.playBuzzerSound} className="btn btn-buzz-disabled"></div>
+                <br></br>
+                <Spinner /> <Text fontSize='medium'>Hold up!</Text>
+            </div>);
+    }
+
 }
 
 function GreenBuzzer(props: IBuzzerProps) {
